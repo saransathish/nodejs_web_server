@@ -74,7 +74,7 @@ const server = http.createServer((req, res) => {
                     ? path.join(__dirname, 'views', req.url)
                     : path.join(__dirname, req.url);
 
-    // makes .html extension not required in the browser
+    
     if (!extension && req.url.slice(-1) !== '/') filePath += '.html';
 
     const fileExists = fs.existsSync(filePath);
